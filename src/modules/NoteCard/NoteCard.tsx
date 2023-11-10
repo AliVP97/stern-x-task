@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { Tag, TagProps } from "../../components";
 
-import MenuIcon from "../../../public/menu.svg?react";
+import MenuIcon from "../../assets/menu.svg?react";
 
 export type NoteCardProps = {
   date: string;

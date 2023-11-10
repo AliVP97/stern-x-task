@@ -6,7 +6,7 @@ import {
 } from "react-hook-form";
 import cn from "classnames";
 
-import AttentionIcon from "../../../public/attention.svg?react";
+import AttentionIcon from "../../assets/attention.svg?react";
 
 export type TextfieldProps = {
   label: string | number | readonly string[] | undefined;
