@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "url": "https://github.com/AliVP97/stern-x-task.git"
+  },
+  "homepage": "https://AliVP97.github.io/stern-x-task",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
