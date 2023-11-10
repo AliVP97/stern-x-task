@@ -4,3 +4,4 @@ export * from "./Tab";
 export * from "./IconButton";
 export * from "./Form";
 export * from "./Textfield";
+export * from "./Description";
