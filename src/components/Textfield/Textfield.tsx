@@ -8,8 +8,6 @@ import cn from "classnames";
 
 import AttentionIcon from "../../assets/attention.svg?react";
 
-import styles from "./Textfield.module.scss";
-
 export type TextfieldProps = {
   label: string | number | readonly string[] | undefined;
 } & Omit<UseControllerProps, "control"> &
@@ -31,10 +29,10 @@ export const Textfield: FunctionComponent<TextfieldProps> = ({
   } = useController({ name, rules, control, shouldUnregister, defaultValue });
 
   return (
-    <div className={cn(styles["textfield"], "relative", error && "")}>
+    <div className={"group relative"}>
       <label
         className={cn(
-          "pointer-events-none absolute left-4 origin-top-left translate-y-[18px] text-base font-normal leading-5 text-gray-400 transition-transform",
+          "pointer-events-none absolute left-4 origin-top-left translate-y-[18px] text-base font-normal leading-5 text-gray-400 transition-transform group-focus-within:translate-y-2.5 group-focus-within:scale-[0.625]",
           value && "translate-y-[10px] scale-[0.625]",
         )}
       >
