@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { Tag } from "../../components";
+import { Tag, TagProps } from "../../components";
 
 import MenuIcon from "../../assets/menu.svg?react";
 
@@ -8,7 +8,7 @@ export type NoteCardProps = {
   time: string;
   author: string;
   title: string;
-  tag: string;
+  tag: TagProps;
   description: string;
 };
 
@@ -31,7 +31,7 @@ export const NoteCard: FunctionComponent<NoteCardProps> = ({
       </div>
       <div className="flex gap-x-2">
         <div className="text-lg font-bold leading-6">{title}</div>
-        {tag && <Tag>{tag}</Tag>}
+        {tag && <Tag {...tag} />}
       </div>
       <div className="text-sm leading-4">{description}</div>
       <MenuIcon className=" absolute right-3 top-3" />
