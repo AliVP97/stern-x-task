@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FunctionComponent, ReactNode } from "react";
 import cn from "classnames";
-import EditIcon from "../../assets/edit.svg?react";
+import EditIcon from "../../../public/edit.svg?react";
 
 export type ButtonSizeType = "xs" | "sm" | "md" | "lg";
 

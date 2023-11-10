@@ -6,7 +6,7 @@ import {
 } from "react-hook-form";
 import cn from "classnames";
 
-import ArrowIcon from "../../assets/arrow.svg?react";
+import ArrowIcon from "../../../public/arrow.svg?react";
 
 export type ComboBoxProps = {
   label?: string | number | readonly string[] | undefined;
