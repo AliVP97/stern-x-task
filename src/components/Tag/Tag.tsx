@@ -8,7 +8,7 @@ export type TagVariantType = "info" | "danger" | "done";
 export type TagProps = {
   size?: TagSizeType;
   variant?: TagVariantType;
-  children: string;
+  text: string;
 };
 
 const variantClassMapper: Record<TagVariantType, string> = {
@@ -26,7 +26,7 @@ const sizeClassMapper: Record<TagSizeType, string> = {
 export const Tag: FunctionComponent<TagProps> = ({
   size = "md",
   variant = "info",
-  children,
+  text,
 }) => {
   return (
     <div
@@ -36,7 +36,7 @@ export const Tag: FunctionComponent<TagProps> = ({
         variantClassMapper[variant],
       )}
     >
-      {children}
+      {text}
     </div>
   );
 };
