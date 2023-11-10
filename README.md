@@ -1,27 +1,9 @@
-# React + TypeScript + Vite
+# Stern X Company Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Request Context
 
-Currently, two official plugins are available:
+Thanks for your interest in the Frontend position at SternX and taking the time to meet with us before.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+As a part of the hiring process, we would like to ask you to complete an assignment so that we can have a more subtle picture of your skills. This will also help you to have a better understanding of day-to-day tasks a Frontend developer might face at Sternx.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[Figma URL](https://www.figma.com/community/file/1303708968150755309/sternx-task-front-end-note-management)
