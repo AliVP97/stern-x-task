@@ -21,7 +21,7 @@ export const NoteCard: FunctionComponent<NoteCardProps> = ({
   description,
 }) => {
   return (
-    <div className="relative flex w-full flex-col gap-y-3 rounded-lg border border-gray-100 bg-white p-3 pb-5 hover:border-[#CACACD] active:border-2 active:border-[#99999B]">
+    <div className="relative flex w-full cursor-default flex-col gap-y-3 rounded-lg border border-gray-100 bg-white p-3 pb-5 hover:border-[#CACACD] active:border-2 active:border-[#99999B]">
       <div className="flex gap-x-1 text-xs text-gray-800">
         {date}
         <span className="text-gray-400">@</span>
