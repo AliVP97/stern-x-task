@@ -5,6 +5,7 @@ import {
   FieldValues,
   DefaultValues,
   SubmitHandler,
+  UseFormReturn,
 } from "react-hook-form";
 
 export type FormProps = {
@@ -12,20 +13,22 @@ export type FormProps = {
     | DefaultValues<FieldValues>
     | { [x: string]: object | undefined };
   onSubmit?: SubmitHandler<FieldValues>;
+  useFormMethods: UseFormReturn<FieldValues>;
   children: ReactNode;
 } & HTMLAttributes<HTMLFormElement>;
 
 export const Form: FunctionComponent<FormProps> = ({
-  defaultValues,
   onSubmit,
+  useFormMethods,
   children,
   ...props
 }) => {
-  const methods = useForm({ defaultValues });
-
   return (
-    <FormProvider {...methods}>
-      <form onSubmit={onSubmit && methods.handleSubmit(onSubmit)} {...props}>
+    <FormProvider {...useFormMethods}>
+      <form
+        onSubmit={onSubmit && useFormMethods.handleSubmit(onSubmit)}
+        {...props}
+      >
         {children}
       </form>
     </FormProvider>
