@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
-import { Header } from "../modules";
 import { Outlet } from "react-router-dom";
+
+import { Header } from "../modules";
 
 export const Layout: FunctionComponent = () => {
   return (
