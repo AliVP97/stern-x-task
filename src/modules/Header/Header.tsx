@@ -1,4 +1,5 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
 import { Button } from "../../components";
@@ -8,6 +9,9 @@ import MacbookIcon from "../../assets/Macbook.png";
 
 export const Header: FunctionComponent = () => {
   const [noteList] = useLocalStorage<NoteCardProps[]>("note-list", []);
+  const navigate = useNavigate();
+
+  const addNote = useCallback(() => navigate("new"), [navigate]);
 
   return (
     <div
@@ -30,7 +34,11 @@ export const Header: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      {noteList.length > 0 && <Button leftIcon>Add Note</Button>}
+      {noteList.length > 0 && (
+        <Button leftIcon onClick={addNote}>
+          Add Note
+        </Button>
+      )}
     </div>
   );
 };
