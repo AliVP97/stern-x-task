@@ -2,14 +2,14 @@ import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Layout = lazy(() => import("./Layout"));
-const List = lazy(() => import("./pages/List"));
+const New = lazy(() => import("./pages/New"));
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<List />} />
+          <Route path="new" element={<New />} />
         </Route>
       </Routes>
     </BrowserRouter>
