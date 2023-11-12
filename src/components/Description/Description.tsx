@@ -28,7 +28,7 @@ export const Description: FunctionComponent<DescriptionProps> = ({
   return (
     <textarea
       className={
-        "rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-normal leading-4 text-gray-600 placeholder:text-gray-500 focus:placeholder:text-[#99999B] focus-visible:outline-2 focus-visible:outline-blue-400"
+        "w-[-webkit-fill-available] rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-normal leading-4 text-gray-600 placeholder:text-gray-500 focus:placeholder:text-[#99999B] focus-visible:outline-2 focus-visible:outline-blue-400"
       }
       name={registeredName}
       value={value}

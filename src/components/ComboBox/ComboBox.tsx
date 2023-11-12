@@ -46,7 +46,7 @@ export const ComboBox: FunctionComponent<ComboBoxProps> = ({
       <ArrowIcon className="pointer-events-none absolute right-4 top-[18px] text-gray-400" />
       <select
         className={
-          "h-14 w-full appearance-none rounded-lg border border-gray-200 bg-white px-4 pb-3 pt-6 text-base font-normal leading-5 text-gray-700 focus-visible:outline-2 focus-visible:outline-blue-400"
+          "h-14 w-[-webkit-fill-available] appearance-none rounded-lg border border-gray-200 bg-white px-4 pb-3 pt-6 text-base font-normal leading-5 text-gray-700 focus-visible:outline-2 focus-visible:outline-blue-400"
         }
         name={registeredName}
         value={value}
