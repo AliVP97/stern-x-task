@@ -62,7 +62,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
     >
       {leftIcon && <EditIcon />}
       <div>{children}</div>
-      <div>{rightIcon}</div>
+      {rightIcon && <div>{rightIcon}</div>}
     </button>
   );
 };
