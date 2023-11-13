@@ -2,6 +2,7 @@
   "name": "stern-x-task",
   "version": "0.0.1",
   "type": "module",
+  "private": false,
   "repository": {
     "url": "https://github.com/AliVP97/stern-x-task.git"
   },
