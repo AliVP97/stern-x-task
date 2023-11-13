@@ -10,4 +10,5 @@ As a part of the hiring process, we would like to ask you to complete an assignm
 
 ~~[Click Here to see Demo](https://alivp97.github.io/stern-x-task/)~~
 
-> The demo link isn't work properly due some problems with `github pages`
+> The demo link isn't work properly due some problems with `github pages`.
+> So please clone the project in order to testing it
