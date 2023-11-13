@@ -38,7 +38,7 @@ export const ComboBox: FunctionComponent<ComboBoxProps> = ({
       <label
         className={cn(
           "pointer-events-none absolute left-4 origin-top-left translate-y-[18px] text-base font-normal leading-5 text-gray-400 transition-transform group-focus-within:translate-y-2.5 group-focus-within:scale-[0.625]",
-          value && "translate-y-[10px] scale-[0.625]",
+          value && "translate-y-[9.75px] scale-[0.625]",
         )}
       >
         {label}
