@@ -21,7 +21,7 @@ const App = () => {
           <Route
             path="new"
             element={
-              <Suspense fallback={<New />}>
+              <Suspense fallback={<Loader />}>
                 <New />
               </Suspense>
             }
