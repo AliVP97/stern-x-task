@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Loader } from "./components/Loader";
 
-const Layout = lazy(() => import("./Layout"));
+const Layout = lazy(() => import("./layout"));
 const New = lazy(() => import("./pages/New"));
 
 const App = () => {
