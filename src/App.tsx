@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Loader } from "./components/Loader";
 
@@ -8,7 +8,7 @@ const New = lazy(() => import("./pages/New"));
 
 const App = () => {
   return (
-    <HashRouter basename="/">
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -28,7 +28,7 @@ const App = () => {
           />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
