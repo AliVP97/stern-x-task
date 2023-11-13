@@ -8,4 +8,6 @@ As a part of the hiring process, we would like to ask you to complete an assignm
 
 [Figma URL](https://www.figma.com/community/file/1303708968150755309/sternx-task-front-end-note-management)
 
-[Click Here to see Demo](https://alivp97.github.io/stern-x-task/)
+~~[Click Here to see Demo](https://alivp97.github.io/stern-x-task/)~~
+
+> The demo link isn't work properly due some problems with `github pages`
