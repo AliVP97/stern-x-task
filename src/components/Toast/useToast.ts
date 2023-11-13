@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-export const useToast = () => {
+export type UseToastReturnType = {
+  showNotification: (notificationText: string) => void;
+  showState: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
+  notificationText: string;
+};
+
+export const useToast = (): UseToastReturnType => {
   const [notificationText, setNotificationText] = useState<string>("");
   const showState = useState<boolean>(false);
   const [isShow, setIsShow] = showState;
@@ -24,5 +30,5 @@ export const useToast = () => {
     }
   }, [isShow]);
 
-  return { showNotification, showState };
+  return { showNotification, showState, notificationText };
 };

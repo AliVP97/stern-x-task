@@ -1,2 +1,4 @@
-export * from "./Toast";
-export * from "./useToast";
+import { useToastContext } from "./useToastContext";
+
+export { useToastContext as useToast };
+export * from "./Toast.provider";
