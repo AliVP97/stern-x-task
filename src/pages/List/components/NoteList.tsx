@@ -24,13 +24,14 @@ export const NoteList: FunctionComponent = () => {
       <div className="flex gap-x-3">
         {countTags(noteList).map(([tag, count]) => (
           <Tab
+            key={tag}
             active={tag === filterKeyword}
             onClick={() => setFilterKeyword(tag)}
           >{`${tag} (${count})`}</Tab>
         ))}
       </div>
       {filteredList.map((note) => (
-        <NoteCard key={Number(note.date)} {...note} />
+            <NoteCard key={new Date(note.date).getTime()} {...note} />
       ))}
     </div>
   );
