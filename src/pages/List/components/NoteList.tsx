@@ -20,7 +20,7 @@ export const NoteList: FunctionComponent = () => {
   }, [filterKeyword, noteList]);
 
   return (
-    <div>
+    <div className="flex h-full flex-col gap-y-5">
       <div className="flex gap-x-3">
         {countTags(noteList).map(([tag, count]) => (
           <Tab
@@ -30,9 +30,13 @@ export const NoteList: FunctionComponent = () => {
           >{`${tag} (${count})`}</Tab>
         ))}
       </div>
-      {filteredList.map((note) => (
+      <div className="overflow-auto">
+        <div className="flex flex-col gap-y-4">
+          {filteredList.map((note) => (
             <NoteCard key={new Date(note.date).getTime()} {...note} />
-      ))}
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
