@@ -1,6 +1,7 @@
 import { FunctionComponent, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import useLocalStorage from "use-local-storage";
 
 import {
   Button,
@@ -9,13 +10,12 @@ import {
   Form,
   IconButton,
   Textfield,
+  useToast,
 } from "../../components";
-import { relativeDate } from "../../utils";
+import { NoteCardProps } from "../../modules";
 
 import ArrowIcon from "../../assets/Double Alt Arrow Right.svg?react";
 import NotesIcon from "../../assets/Notes.svg?react";
-import useLocalStorage from "use-local-storage";
-import { NoteCardProps } from "../../modules";
 
 // type FormFields = {
 //   title: string;
@@ -29,6 +29,7 @@ export const New: FunctionComponent = () => {
     [],
   );
   const navigate = useNavigate();
+  const { showNotification } = useToast();
   const useFormMethods = useForm<FieldValues>();
 
   const goHome = useCallback(() => navigate("/"), [navigate]);
@@ -36,13 +37,14 @@ export const New: FunctionComponent = () => {
   const onSubmit: SubmitHandler<FieldValues> = useCallback(
     (data: FieldValues) =>
       new Promise((resolve) => {
+        showNotification("Note Added");
+
         const now = new Date();
 
         resolve(
           setNoteList([
-            ...noteList,
             {
-              date: relativeDate(now),
+              date: now,
               time: `${now.getHours()}:${now.getMinutes()}`,
               author: "Ali Valipour",
               title: data.title,
@@ -55,6 +57,7 @@ export const New: FunctionComponent = () => {
               },
               description: data.description || "",
             },
+            ...noteList,
           ]),
         );
       }),
@@ -113,7 +116,7 @@ export const New: FunctionComponent = () => {
           </div>
         </div>
         <div className="flex w-full gap-x-3">
-          <Button variant={"outline"} className="w-full">
+          <Button className="w-full" variant={"outline"} onClick={goHome}>
             Cancel
           </Button>
           <Button type="submit" className="w-full">
