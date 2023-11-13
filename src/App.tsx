@@ -1,5 +1,7 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Loader } from "./components/Loader";
 
 const Layout = lazy(() => import("./Layout"));
 const New = lazy(() => import("./pages/New"));
@@ -8,8 +10,22 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="new" element={<New />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Layout />
+            </Suspense>
+          }
+        >
+          <Route
+            path="new"
+            element={
+              <Suspense fallback={<New />}>
+                <New />
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
