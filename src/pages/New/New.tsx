@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import {
   Button,
@@ -17,11 +17,11 @@ import NotesIcon from "../../assets/Notes.svg?react";
 import useLocalStorage from "use-local-storage";
 import { NoteCardProps } from "../../modules";
 
-type FormFields = {
-  title: string;
-  priority: string;
-  description?: string;
-};
+// type FormFields = {
+//   title: string;
+//   priority: string;
+//   description?: string;
+// };
 
 export const New: FunctionComponent = () => {
   const [noteList, setNoteList] = useLocalStorage<NoteCardProps[]>(
@@ -29,12 +29,12 @@ export const New: FunctionComponent = () => {
     [],
   );
   const navigate = useNavigate();
-  const useFormMethods = useForm();
+  const useFormMethods = useForm<FieldValues>();
 
   const goHome = useCallback(() => navigate("/"), [navigate]);
 
-  const onSubmit = useCallback(
-    (data: FormFields) =>
+  const onSubmit: SubmitHandler<FieldValues> = useCallback(
+    (data: FieldValues) =>
       new Promise((resolve) => {
         const now = new Date();
 

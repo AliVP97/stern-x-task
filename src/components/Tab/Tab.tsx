@@ -1,5 +1,4 @@
 import { FunctionComponent, HTMLAttributes } from "react";
-import cn from "classnames";
 
 export type TabProps = {
   active?: boolean;
