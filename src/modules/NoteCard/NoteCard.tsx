@@ -2,9 +2,10 @@ import { FunctionComponent } from "react";
 import { Tag, TagProps } from "../../components";
 
 import MenuIcon from "../../assets/menu.svg?react";
+import { relativeDate } from "../../utils";
 
 export type NoteCardProps = {
-  date: string;
+  date: Date;
   time: string;
   author: string;
   title: string;
@@ -23,7 +24,7 @@ export const NoteCard: FunctionComponent<NoteCardProps> = ({
   return (
     <div className="relative flex w-full cursor-default flex-col gap-y-3 rounded-lg border border-gray-100 bg-white p-3 pb-5 hover:border-[#CACACD] active:border-2 active:border-[#99999B]">
       <div className="flex gap-x-1 text-xs text-gray-800">
-        {date}
+        {relativeDate(date)}
         <span className="text-gray-400">@</span>
         {time}
         <span className="text-gray-400">by</span>
