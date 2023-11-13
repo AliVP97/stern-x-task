@@ -8,7 +8,7 @@ const New = lazy(() => import("./pages/New"));
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route
           path="/"
