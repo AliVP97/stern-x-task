@@ -30,7 +30,7 @@ export const NoteList: FunctionComponent = () => {
         ))}
       </div>
       {filteredList.map((note) => (
-        <NoteCard {...note} />
+        <NoteCard key={Number(note.date)} {...note} />
       ))}
     </div>
   );
